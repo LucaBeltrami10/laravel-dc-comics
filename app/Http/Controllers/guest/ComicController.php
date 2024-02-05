@@ -9,7 +9,8 @@ class ComicController extends Controller
 {
     public function index()
     {
+        $comics = config('comics');
 
-        return view('guest.comics.index');
+        return view('guest.comics.index', ['comics' => $comics]);
     }
 }
