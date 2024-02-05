@@ -6,4 +6,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [ComicController::class, 'index']);
 
-Route::get('/{name}', [ComicController::class, 'show']);
+Route::get('/{id}', [ComicController::class, 'show']);

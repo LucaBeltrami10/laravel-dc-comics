@@ -18,7 +18,7 @@ class ComicController extends Controller
 
     public function show($id)
     {
-        $comics = Comic::find($id);
+        $comics = Comic::findOrFail($id);
 
         return view('guest.comics.show', ['comics' => $comics]);
     }
