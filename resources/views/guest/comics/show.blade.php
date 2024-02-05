@@ -5,7 +5,7 @@
 <div class="container">
     <div class="row">
             <div class="col-12">
-                <div class="card mx-2" style="width: 18rem;">
+                <div class="card mx-2 text-center" style="width: 18rem;">
                     <img src="{{ $comics['thumb'] }}" class="card-img-top" alt="...">
                     <div class="card-body">
                     <ul>
