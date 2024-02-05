@@ -19,7 +19,6 @@ return new class extends Migration
             $table->string('series', 30);
             $table->date('sale_date');
             $table->string('type', 100);
-            $table->array('artists');
             $table->timestamps();
         });
     }
