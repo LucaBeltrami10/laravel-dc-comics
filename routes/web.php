@@ -5,3 +5,5 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', [ComicController::class, 'index']);
+
+Route::get('/{name}', [ComicController::class, 'show']);
