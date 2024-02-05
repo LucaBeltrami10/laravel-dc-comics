@@ -13,4 +13,11 @@ class ComicController extends Controller
 
         return view('guest.comics.index', ['comics' => $comics]);
     }
+
+    public function show($name)
+    {
+        $comics = config('comics');
+
+        return view('guest.comics.show', ['comics' => $comics]);
+    }
 }
