@@ -30,16 +30,18 @@ class ComicController extends Controller
 
     public function store(Request $request)
     {
+        $data = $request->all();
         /* dd($request); */
         $comicModel = new Comic();
 
-        $comicModel->title = $request->title;
+        /* $comicModel->title = $request->title;
         $comicModel->description = $request->description;
         $comicModel->thumb = $request->thumb;
         $comicModel->price = ('$ ' . $request->price);
         $comicModel->series = $request->series;
         $comicModel->sale_date = $request->sale_date;
-        $comicModel->type = $request->type;
+        $comicModel->type = $request->type; */
+        $comicModel->fill($data);
         $comicModel->save();
 
 
