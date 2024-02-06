@@ -22,4 +22,9 @@ class ComicController extends Controller
 
         return view('guest.comics.show', ['comics' => $comics]);
     }
+
+    public function create()
+    {
+        return view('guest.comics.create');
+    }
 }
