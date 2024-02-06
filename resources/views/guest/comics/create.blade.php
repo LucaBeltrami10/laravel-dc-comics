@@ -2,7 +2,7 @@
 
 @section('main-section')
 
-<form>
+<form class="w-50 mx-auto" action="" method="POST">
     <div class="mb-3">
       <label for="text" class="form-label">Titolo</label>
       <input type="text" class="form-control" id="title" name="title">
