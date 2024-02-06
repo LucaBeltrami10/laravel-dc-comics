@@ -28,7 +28,7 @@
         <input type="date" class="form-control" id="sale_date" name="sale_date">
       </div>
       <div class="mb-3">
-        <label for="text" class="form-label">Titolo</label>
+        <label for="text" class="form-label">Tipologia</label>
         <input type="text" class="form-control" id="type" name="type">
       </div>
     <button type="submit" class="btn btn-primary">Submit</button>

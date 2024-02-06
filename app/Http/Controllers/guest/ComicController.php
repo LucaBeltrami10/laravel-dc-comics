@@ -31,6 +31,6 @@ class ComicController extends Controller
     public function store(Request $request)
     {
         dd($request);
-        return view('guest.comics.store');
+        return $request->all();
     }
 }
