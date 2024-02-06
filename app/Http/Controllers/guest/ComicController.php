@@ -27,4 +27,10 @@ class ComicController extends Controller
     {
         return view('guest.comics.create');
     }
+
+    public function store(Request $request)
+    {
+        dd($request);
+        return view('guest.comics.store');
+    }
 }
