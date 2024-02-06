@@ -2,3 +2,9 @@
 
 @import "./partials/variables";
 @import "./partials/mixins";
+
+header {
+    @import "./partials/header";
+}
+
+main {}
