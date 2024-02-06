@@ -3,6 +3,8 @@
 @section('main-section')
 
 <form class="w-50 mx-auto" action="{{ route('guest.store') }}" method="POST">
+    @csrf
+
     <div class="mb-3">
       <label for="text" class="form-label">Titolo</label>
       <input type="text" class="form-control" id="title" name="title">
@@ -17,7 +19,7 @@
       </div>
       <div class="mb-3">
         <label for="number" class="form-label">Prezzo</label>
-        <input type="number" class="form-control" id="price" name="price">
+        <input type="number" class="form-control" id="price" name="price" step="0.01" min="0" max="999999.99">
       </div>
       <div class="mb-3">
         <label for="text" class="form-label">Serie</label>
