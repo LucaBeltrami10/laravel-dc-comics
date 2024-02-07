@@ -5,7 +5,6 @@ namespace App\Http\Controllers\guest;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Comic;
-use PhpParser\Node\Stmt\Return_;
 
 class ComicController extends Controller
 {
@@ -56,25 +55,13 @@ class ComicController extends Controller
         return view('guest.comics.edit', ['comic' => $comic]);
     }
 
-    public function update(Request $request, string $id,)
+    public function update(Request $request, string $id)
     {
         $data = $request->all();
-
-
         $comic = Comic::findOrFail($id);
-        /* d($comic); */
-
-        /* $comicModel->title = $request->title;
-        $comicModel->description = $request->description;
-        $comicModel->thumb = $request->thumb;
-        $comicModel->price = ('$ ' . $request->price);
-        $comicModel->series = $request->series;
-        $comicModel->sale_date = $request->sale_date;
-        $comicModel->type = $request->type; */
-        /* $comicModel->save(); */
+        dd($comic);
 
         $comic->update($data);
-
 
         return redirect()->route('guest.show', $request->id);
     }
