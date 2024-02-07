@@ -18,7 +18,8 @@
       </div>
       <div class="mb-3">
         <label for="number" class="form-label">Prezzo</label>
-        <input type="number" class="form-control" id="price" name="price" step="0.01" min="0" max="999999.99" value="{{ $comic->price }}">
+        <p>{{ $comic->price }}</p>
+        <input type="number" class="form-control" id="price" name="price" step="0.01" min="0" max="999999.99" value="{{ $comic['price'] }}">
       </div>
       <div class="mb-3">
         <label for="text" class="form-label">Serie</label>
@@ -34,7 +35,7 @@
       </div>
       <div class="mb-3">
         <label for="text" class="form-label">Descrizione</label>
-        <input type="textarea" class="form-control" id="description" name="description" value="{{ $comic->description }}">
+        <textarea type="textarea" class="form-control" id="description" name="description" value="">{{ $comic->description }}</textarea>
       </div>
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>

@@ -32,7 +32,6 @@ class ComicController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
-        $data['price'] = '$ ' . $data['price'];
         /* dd($request); */
         $comicModel = new Comic();
 
@@ -57,12 +56,13 @@ class ComicController extends Controller
         return view('guest.comics.edit', ['comic' => $comic]);
     }
 
-    public function update(Request $request, string $id)
+    public function update(Request $request, string $id,)
     {
         $data = $request->all();
-        $data['price'] = '$ ' . $data['price'];
+
 
         $comic = Comic::findOrFail($id);
+        /* d($comic); */
 
         /* $comicModel->title = $request->title;
         $comicModel->description = $request->description;
