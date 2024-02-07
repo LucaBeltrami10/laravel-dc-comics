@@ -8,7 +8,7 @@
                 <div class="card mx-2 text-center mx-auto" style="width: 18rem;">
                     <img src="{{ $comics['thumb'] }}" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <a href="" class="btn btn-primary">Modifica</a>
+                        <a class="btn btn-primary" href="{{ route('guest.edit', $comics->id) }}">Modifica</a>
                     </div>
                 </div>
             </div>
@@ -42,7 +42,7 @@
                                 </div>
                             </li>
                         </ul>
-                        <a class="btn btn-primary" href="{{ route('guest.edit', $comics->id) }}">Modifica</a>
+                        
                     </div>
                 </div>
             </div>

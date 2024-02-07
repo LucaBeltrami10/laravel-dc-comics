@@ -2,7 +2,7 @@
 
 @section('main-section')
 
-<form class="w-50 mx-auto" action="" method="POST">
+<form class="w-50 mx-auto" action="{{ route('guest.update', $comic->id) }}" method="POST">
     @csrf
 
     @method('PUT')

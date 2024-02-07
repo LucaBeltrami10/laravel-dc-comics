@@ -72,7 +72,7 @@ class ComicController extends Controller
         $comicModel->sale_date = $request->sale_date;
         $comicModel->type = $request->type; */
         $comicModel->update($data);
-        $comicModel->save();
+        /* $comicModel->save(); */
 
 
         return redirect()->route('guest.show', $comicModel->id);
