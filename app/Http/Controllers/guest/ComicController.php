@@ -56,4 +56,25 @@ class ComicController extends Controller
 
         return view('guest.comics.edit', ['comic' => $comic]);
     }
+
+    public function update(Request $request)
+    {
+        $data = $request->all();
+        $data['price'] = '$ ' . $data['price'];
+        /* dd($request); */
+        $comicModel = new Comic();
+
+        /* $comicModel->title = $request->title;
+        $comicModel->description = $request->description;
+        $comicModel->thumb = $request->thumb;
+        $comicModel->price = ('$ ' . $request->price);
+        $comicModel->series = $request->series;
+        $comicModel->sale_date = $request->sale_date;
+        $comicModel->type = $request->type; */
+        $comicModel->update($data);
+        $comicModel->save();
+
+
+        return redirect()->route('guest.show', $comicModel->id);
+    }
 }
