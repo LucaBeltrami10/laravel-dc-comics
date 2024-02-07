@@ -46,6 +46,6 @@ class ComicController extends Controller
         $comicModel->save();
 
 
-        return route('guest.show', $comicModel->id);
+        return redirect()->route('guest.show', $comicModel->id);
     }
 }
