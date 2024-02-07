@@ -19,6 +19,7 @@
                             <li class="list-group-item">
                                 <div>
                                     <p class="m-0 fw-bold">Titolo:</p>
+                                    <p>{{ $comics->id }}</p>
                                     <p class="m-0">{{ $comics['title'] }}</p>
                                 </div>
                             </li>
@@ -41,7 +42,7 @@
                                 </div>
                             </li>
                         </ul>
-                        <a class="btn btn-primary" href="">Modifica</a>
+                        <a class="btn btn-primary" href="{{ route('guest.edit', $comics->id) }}">Modifica</a>
                     </div>
                 </div>
             </div>

@@ -2,8 +2,10 @@
 
 @section('main-section')
 
-<form class="w-50 mx-auto" action="" method="">
+<form class="w-50 mx-auto" action="" method="POST">
     @csrf
+
+    @method('PUT')
 
     <div class="mb-3">
       <label for="text" class="form-label">Titolo</label>

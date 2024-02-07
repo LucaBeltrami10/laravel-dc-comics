@@ -5,6 +5,7 @@ namespace App\Http\Controllers\guest;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Comic;
+use PhpParser\Node\Stmt\Return_;
 
 class ComicController extends Controller
 {
@@ -49,9 +50,10 @@ class ComicController extends Controller
         return redirect()->route('guest.show', $comicModel->id);
     }
 
-    public function edit()
+    public function edit($id)
     {
+        $dataComic = Comic::findOrFail($id);
 
-        return view('guest.comics.edit');
+        return view('guest.comics.edit', ['data' => $dataComic]);
     }
 }
