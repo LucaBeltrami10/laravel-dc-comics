@@ -48,4 +48,10 @@ class ComicController extends Controller
 
         return redirect()->route('guest.show', $comicModel->id);
     }
+
+    public function edit()
+    {
+
+        return view('guest.comics.edit');
+    }
 }
