@@ -33,7 +33,6 @@ class ComicController extends Controller
         $data = $request->all();
         /* dd($request); */
         $comicModel = new Comic();
-
         /* $comicModel->title = $request->title;
         $comicModel->description = $request->description;
         $comicModel->thumb = $request->thumb;
@@ -55,13 +54,13 @@ class ComicController extends Controller
         return view('guest.comics.edit', ['comic' => $comic]);
     }
 
-    public function update(Request $request, string $id)
+    public function update(Request $request, Comic $comic)
     {
         $data = $request->all();
-        $comic = Comic::findOrFail($id);
+        /* $comic = Comic::findOrFail($id); */
         dd($comic);
 
-        $comic->update($data);
+        /* $comic->update($data); */
 
         return redirect()->route('guest.show', $request->id);
     }
